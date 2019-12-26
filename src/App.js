@@ -1,5 +1,8 @@
 import React from 'react';
 
+import Container from './Screens';
+import './scss/mixins.scss'
+
 class App extends React.Component{
   constructor(props){
     super(props);
@@ -8,9 +11,7 @@ class App extends React.Component{
   render(){
     return(
       <div>
-        <h1>
-          Akash Kumar A D
-        </h1>
+          <Container />
       </div>
     )
   }
