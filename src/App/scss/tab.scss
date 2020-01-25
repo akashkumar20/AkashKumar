@@ -1,0 +1,17 @@
+.tab-main-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.tab{
+    padding: 15px;
+    outline: none;
+    :active{
+        outline: none;
+    }
+    cursor: pointer;
+}
+.active {
+    color: #FFC926;
+}
