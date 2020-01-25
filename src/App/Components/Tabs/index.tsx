@@ -38,7 +38,7 @@ class Tabs extends React.Component<ITabsProps, any> {
                             tabIndex={0}
                             className={`tab ${active === i ? 'active' : ''}`}
                             key={tab.tab}
-                            onClick={() => { history.push(`/AkashKumar/${tab.route}`); }}
+                            onClick={() => history.push(`/AkashKumar/${tab.route}`)}
                             onKeyPress={() => (console.log())}
                         >
                             <span>{tab.tab}</span>
