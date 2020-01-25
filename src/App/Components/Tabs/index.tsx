@@ -15,7 +15,7 @@ class Tabs extends React.Component<ITabsProps, any> {
 
     componentDidMount() {
         const { history: { location: { pathname } }, tabs } = this.props;
-        const split = pathname.split('/')[1];
+        const split = pathname.split('/')[2];
         tabs.forEach((el:any, i:number) => {
             if (split === el.route) {
                 this.setState((pre: any) => ({
