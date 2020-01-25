@@ -31,7 +31,7 @@ class MyPortfolio extends React.Component {
             <div className="websites">
                 {/* <Tribe /> */}
                 <iframe width="1024" height="768" title="tribe" src="https://akashkumar20.github.io/tribe/" />
-                <iframe width="1024" height="768" title="akashkumar" src="https://akashkumar20.github.io/akashkumar/" />
+                <iframe width="1024" height="768" title="akashkumar" src="https://akashkumar20.github.io/AkashKumar/" />
             </div>
         );
     }
