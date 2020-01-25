@@ -1,25 +1,42 @@
 import React from 'react';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
 import '../../scss/tab.scss';
 
-interface ITabsProps {
+interface ITabsProps extends RouteComponentProps {
     tabs: any,
 }
 class Tabs extends React.Component<ITabsProps, any> {
     constructor(props:ITabsProps) {
         super(props);
-        this.state = {};
+        this.state = {
+            active: 0,
+        };
+    }
+
+    componentDidMount() {
+        const { history: { location: { pathname } }, tabs } = this.props;
+        const split = pathname.split('/')[1];
+        tabs.forEach((el:any, i:number) => {
+            if (split === el.route) {
+                this.setState((pre: any) => ({
+                    ...pre,
+                    active: i,
+                }));
+            }
+        });
     }
 
     renderTabs() {
         const { tabs } = this.props;
+        const { active } = this.state;
         return (
             <div className="tab-main-box">
                 {
-                    tabs.map((tab:any) => (
+                    tabs.map((tab:any, i:number) => (
                         <div
                             role="button"
                             tabIndex={0}
-                            className="tab"
+                            className={`tab ${active === i ? 'active' : ''}`}
                             key={tab.tab}
                             onClick={() => { window.location.href = tab.route; }}
                             onKeyPress={() => (console.log())}
@@ -44,4 +61,4 @@ class Tabs extends React.Component<ITabsProps, any> {
         return <></>;
     }
 }
-export default Tabs;
+export default withRouter(Tabs);
