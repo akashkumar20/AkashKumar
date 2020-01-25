@@ -27,7 +27,7 @@ class Tabs extends React.Component<ITabsProps, any> {
     }
 
     renderTabs() {
-        const { tabs } = this.props;
+        const { tabs, history } = this.props;
         const { active } = this.state;
         return (
             <div className="tab-main-box">
@@ -38,7 +38,7 @@ class Tabs extends React.Component<ITabsProps, any> {
                             tabIndex={0}
                             className={`tab ${active === i ? 'active' : ''}`}
                             key={tab.tab}
-                            onClick={() => { window.location.href = tab.route; }}
+                            onClick={() => { history.push(`/AkashKumar/${tab.route}`); }}
                             onKeyPress={() => (console.log())}
                         >
                             <span>{tab.tab}</span>

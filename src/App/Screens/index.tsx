@@ -39,10 +39,10 @@ class Container extends React.Component<IContainerProps> {
                 <Tabs tabs={tabs} />
                 <BrowserRouter>
                     <Switch>
-                        <Route exact path="/" component={Home} />
+                        <Route exact path="/AkashKumar" component={Home} />
                         {/* <Route exact path="/contactMe" component={ContactMe} /> */}
-                        <Route exact path="/myPortfolio" component={MyPortfolio} />
-                        <Route exact path="/aboutMe" component={AboutMe} />
+                        <Route exact path="/AkashKumar/myPortfolio" component={MyPortfolio} />
+                        <Route exact path="/AkashKumar/aboutMe" component={AboutMe} />
                     </Switch>
                 </BrowserRouter>
             </div>
